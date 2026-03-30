@@ -25,9 +25,13 @@ async def ingest_telemetry(
     payload: TelemetryPayload, 
     api_key: str = Depends(verify_api_key)
 ):
-
     return {
         "status": "success",
         "message": f"Data from {payload.device_id} securely ingested.",
         "processed_at": int(time.time())
     }
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the IoT Telemetry API! Go to /docs to test the endpoints."}
