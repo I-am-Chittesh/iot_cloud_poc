@@ -9,4 +9,4 @@ Demonstrates secure edge-device authentication using FastAPI.
     - FastAPI
     - Pydantic
 2. To run the server make sure in the main.py file
-    - uvicorn main:app --reload
+    >>> uvicorn main:app --reload
